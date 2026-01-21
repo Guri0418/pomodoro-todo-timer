@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Task Timer</title>
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <h1>Task Timer</h1>
+  </header>
+  <main class="container">
+
+    <!-- 今やるタスクを選択 -->
+    <section class="section task-select">
+      <label for="taskSelect">今やるタスクを選択：</label>
+      <select name="taskName" id="taskSelect">
+        <!-- 未完了のタスクを optionに入れる-->
+      </select>
+      <p class="current-task">選択中：<span id="currentTaskName">未選択</span></p>
+      <!-- TODO：spanとselectを同期 -->
+    </section>
+
+    <!-- タイマー -->
+    <section class="section timer">
+      <div class="status-bar">
+        <p class="timer-task-name" id="timerTaskName"></p>
+        <p id="modeDisplay"></p>
+      </div>
+      <div class="time-display" id="timeDisplay">00:00</div>
+
+      <div class="timer-buttons">
+        <button id="startBtn">スタート</button>
+        <button id="stopBtn">一時停止</button>
+        <button id="resetBtn">リセット</button>
+      </div>
+    </section>
+
+    <!--タスクリスト -->
+    <section class="section task-list">
+      <h2>タスクリスト</h2>
+      <div class="task-input">
+        <input id="taskInput" placeholder="タスクを入力">
+        <button id="addBtn">追加</button>
+      </div>
+      <ul id="taskList">
+        <li>例）レポート作成
+          <div class="btn-group">
+            <button class="done-btn">✓</button>
+            <button class="del-btn">✕</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 完了タスク一覧 -->
+    <section class="section done-list">
+      <h2>完了タスク</h2>
+      <ul id="doneList">
+        <li>例）買い物 <button class="del-btn">✕</button></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
