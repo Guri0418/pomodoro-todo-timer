@@ -244,9 +244,11 @@ function tick() {
     clearInterval(intervalId)
     isRunning = false;
     if (mode === "work") {
+      alert("作業時間終了です！休憩しましょう。"); 
       mode = "break";
       remainingTime = breakTime;
     } else {
+      alert("休憩終了です！次のタスクを始めましょう。");
       mode = "work";
       remainingTime = workTime;
     }
